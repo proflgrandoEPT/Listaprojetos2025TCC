@@ -43,7 +43,7 @@ body, .card {
 }
 
 /* ==========================
-   ESTILO ESPECÍFICO PROJETO 1
+   ESTILO ESPECÍFICO PROJETO 1 (Preto e Dourado)
    ========================== */
 .card:nth-child(1) {
     background: linear-gradient(145deg, #000000, #272727f4);
@@ -59,11 +59,23 @@ body, .card {
     color: #ffffff;
 }
 
-.card:nth-child(1) ul li a:hover {
+/* --- CORREÇÃO DE CONTRASTE NOS LINKS DO CARD 1 --- */
+
+/* Define a cor padrão dos links (Thiago, Raissa) para BRANCO para maior contraste */
+.card:nth-child(1) ul li a {
     color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
 }
 
-/* Ajuste para textos sem link no card 1 */
+/* Define a cor do HOVER dos links para DOURADO para indicar interação */
+.card:nth-child(1) ul li a:hover {
+    color: #f1ba3b;
+    text-decoration: underline;
+}
+/* -------------------------------------------------- */
+
+/* Ajuste para textos sem link no card 1 (mantém branco) */
 .card:nth-child(1) ul li span {
     color: #ffffff;
 }
@@ -141,11 +153,11 @@ body, .card {
                     <ul class="space-y-2 text-gray-600 dark:text-gray-300 mb-6">
                         <li class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            <a href="https://www.linkedin.com/in/flyaway999" target="_blank" class="hover:text-indigo-600 dark:hover:text-indigo-400 hover:underline">Thiago H.</a>
+                            <a href="https://www.linkedin.com/in/flyaway999" target="_blank">Thiago H.</a>
                         </li>
                         <li class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2 text-gray-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            <a href="https://www.linkedin.com/in/raissa-caetano-649100370" target="_blank" class="hover:text-indigo-600 dark:hover:text-indigo-400 hover:underline">Raissa C.</a>
+                            <a href="https://www.linkedin.com/in/raissa-caetano-649100370" target="_blank">Raissa C.</a>
                         </li>
                         <li class="flex items-center pl-6">
                             <span>Hawan</span>
