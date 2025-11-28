@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
-        // Configuração do tema para o Tailwind CSS
         tailwind.config = {
             theme: {
                 extend: {
@@ -21,87 +20,48 @@
                     },
                 },
             },
-            darkMode: 'class', // Ativa o modo escuro
+            darkMode: 'class',
         }
     </script>
 
     <style>
+        body, .card {
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            font-family: 'Inter', sans-serif;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+        }
 
+        /* --- ESTILO ESPECÍFICO PROJETO 1 (Preto e Dourado) --- */
+        .card:nth-child(1) {
+            background: linear-gradient(145deg, #000000, #272727f4);
+            border: 2px solid #f1ba3b;
+            color: #f1ba3b;
+        }
+        .card:nth-child(1) h2 { color: #e5ac26; }
+        .card:nth-child(1) p { color: #ffffff; }
         
-/* ==========================
-   ESTILOS GERAIS
-   ========================== */
-body, .card {
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    font-family: 'Inter', sans-serif;
-}
-
-/* Cards hover */
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
-}
-
-/* ==========================
-   ESTILO ESPECÍFICO PROJETO 1 (Preto e Dourado)
-   ========================== */
-.card:nth-child(1) {
-    background: linear-gradient(145deg, #000000, #272727f4);
-    border: 2px solid #f1ba3b;
-    color: #f1ba3b;
-}
-
-.card:nth-child(1) h2 {
-    color: #e5ac26;
-}
-
-.card:nth-child(1) p {
-    color: #ffffff;
-}
-
-/* --- CORREÇÃO DE CONTRASTE NOS LINKS DO CARD 1 --- */
-
-/* Define a cor padrão dos links (Thiago, Raissa) para BRANCO para maior contraste */
-.card:nth-child(1) ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
-}
-
-/* Define a cor do HOVER dos links para DOURADO para indicar interação */
-.card:nth-child(1) ul li a:hover {
-    color: #f1ba3b;
-    text-decoration: underline;
-}
-/* -------------------------------------------------- */
-
-/* Ajuste para textos sem link no card 1 (mantém branco) */
-.card:nth-child(1) ul li span {
-    color: #ffffff;
-}
-
-.card:nth-child(1) img {
-    border-bottom: 2px solid #000000;
-}
-
-.card:nth-child(1) a.bg-indigo-600 {
-    background-color: #f4b219;
-}
-
-.card:nth-child(1) a.bg-indigo-600:hover {
-    background-color: #daa021;
-}
-
-.card:nth-child(1) a.bg-indigo-200 {
-    background-color: #ffffff;
-    color: #0f0e0e;
-}
-
-.card:nth-child(1) a.bg-indigo-200:hover {
-    background-color: rgba(255, 255, 255, 0.867);
-    color: rgb(0, 0, 0);
-}
-</style>
+        /* Links Card 1 */
+        .card:nth-child(1) ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        .card:nth-child(1) ul li a:hover {
+            color: #f1ba3b;
+            text-decoration: underline;
+        }
+        .card:nth-child(1) ul li span { color: #ffffff; }
+        .card:nth-child(1) img { border-bottom: 2px solid #000000; }
+        
+        /* Botões Card 1 */
+        .card:nth-child(1) a.bg-indigo-600 { background-color: #f4b219; }
+        .card:nth-child(1) a.bg-indigo-600:hover { background-color: #daa021; }
+        .card:nth-child(1) a.bg-indigo-200 { background-color: #ffffff; color: #0f0e0e; }
+        .card:nth-child(1) a.bg-indigo-200:hover { background-color: rgba(255, 255, 255, 0.867); color: rgb(0, 0, 0); }
+    </style>
 
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 font-sans antialiased">
@@ -109,15 +69,73 @@ body, .card {
     <div class="container mx-auto px-4 py-12 max-w-[1600px]">
 
         <header class="text-center mb-16">
-            <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">Portfólio de Projetos TCC do Curso Técnico de Desenvolvimento de Sistemas do 2025</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-indigo-600 dark:text-indigo-400 mb-4">Portfólio de Projetos TCC ADS 2025</h1>
             <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">Vitrine dos projetos de TCC desenvolvidos pelos alunos do curso técnico da E.E. Dr. Alfredo Cardoso.</p>
             
+            <div class="max-w-4xl mx-auto mb-12 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">Muito Além do Código</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mb-6">
+                    Desenvolver estes projetos envolveu uma imersão completa em práticas reais do mercado de tecnologia:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
+                    
+                    <div class="flex items-start space-x-2">
+                        <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <span class="block font-semibold text-gray-700 dark:text-gray-200 text-sm">Versionamento</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Domínio do Git e GitHub.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-2">
+                        <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <span class="block font-semibold text-gray-700 dark:text-gray-200 text-sm">Vibe Coding & IA</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Programação fluida assistida por IA.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-2">
+                        <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <span class="block font-semibold text-gray-700 dark:text-gray-200 text-sm">Colaboração</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Trabalho em equipe e soft skills.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-2">
+                        <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <span class="block font-semibold text-gray-700 dark:text-gray-200 text-sm">Front-end Moderno</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Interfaces responsivas e UX/UI.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-2">
+                        <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <span class="block font-semibold text-gray-700 dark:text-gray-200 text-sm">Responsabilidade</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Compromisso com entregas reais.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-2">
+                        <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <span class="block font-semibold text-gray-700 dark:text-gray-200 text-sm">Marketing Pessoal</span>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">LinkedIn e Portfólio Profissional.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <div class="inline-flex flex-col md:flex-row gap-8 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700">
                 
                 <div class="text-center px-4">
                     <p class="text-xs font-bold tracking-wider text-indigo-500 uppercase mb-2">Professora Orientadora</p>
                     <div class="flex items-center justify-center gap-2">
-                        <span class="text-lg font-medium text-gray-800 dark:text-white">Sidinéia Masciarelli</span>
+                        <span class="text-lg font-medium text-gray-800 dark:text-white">Sidinéia (Néia) Masciarelli (PAET)</span>
                         <a href="https://www.linkedin.com/in/sidin%C3%A9ia-masciarelli-43198420/" target="_blank" class="text-gray-500 hover:text-indigo-600 transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
